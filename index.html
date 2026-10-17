@@ -17,10 +17,11 @@
   <meta property="og:image" content="https://DOMINIO.com/assets/brand/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="inicio">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-wa" viewBox="0 0 32 32"><path d="M16 .5C7.4.5.5 7.4.5 16c0 2.7.7 5.4 2.1 7.8L.5 31.5l7.9-2.1c2.3 1.3 4.9 1.9 7.6 1.9 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28.2c-2.4 0-4.7-.6-6.8-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.7 20.6 3 18.3 3 16 3 8.8 8.8 3 16 3s13 5.8 13 13-5.8 12.7-13 12.7zm7.1-9.5c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.3-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.7-.9-.7h-.7c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.3 2.7 4.2 6.6 5.9.9.4 1.7.6 2.2.8.9.3 1.8.3 2.5.2.8-.1 2.3-.9 2.6-1.9.3-.9.3-1.7.2-1.9-.1-.1-.4-.2-.8-.4z"/></symbol></svg>
 
   <!-- ================= HEADER ================= -->
   <header class="site-header">
@@ -51,7 +52,7 @@
           <li><a href="casos" class="nav__link" data-page="casos">Casos</a></li>
           <li><a href="contacto" class="nav__link" data-page="contacto">Contacto</a></li>
         </ul>
-        <a class="btn btn--wa header-cta" href="contacto" data-wa>
+        <a class="btn btn--primary header-cta" href="contacto" data-wa>
           <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 .5C7.4.5.5 7.4.5 16c0 2.7.7 5.4 2.1 7.8L.5 31.5l7.9-2.1c2.3 1.3 4.9 1.9 7.6 1.9 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28.2c-2.4 0-4.7-.6-6.8-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.7 20.6 3 18.3 3 16 3 8.8 8.8 3 16 3s13 5.8 13 13-5.8 12.7-13 12.7zm7.1-9.5c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.3-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.7-.9-.7h-.7c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.3 2.7 4.2 6.6 5.9.9.4 1.7.6 2.2.8.9.3 1.8.3 2.5.2.8-.1 2.3-.9 2.6-1.9.3-.9.3-1.7.2-1.9-.1-.1-.4-.2-.8-.4z"/></svg>
           Agendar cita
         </a>
@@ -63,158 +64,180 @@
 
     <!-- ================= HERO ================= -->
     <section class="hero">
-      <div class="container">
-        <div class="hero__text reveal">
-          <span class="eyebrow">Dermatóloga · Especialista en tumores de piel</span>
-          <h1>Cuidamos tu piel con ciencia, precisión y calidez</h1>
-          <p>Diagnóstico y tratamiento de enfermedades de la piel, detección temprana de cáncer de piel, láser y estética facial con respaldo médico.</p>
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="hero__kicker">Dermatóloga en Manta</p>
+          <h1>La piel, vista de cerca.</h1>
+          <p class="hero__lead">Detección temprana y tratamiento de tumores de piel, dermatología clínica, láser y estética facial, con el ojo de una especialista que revisa cada lesión en detalle.</p>
           <div class="hero__actions">
-            <a class="btn btn--wa" href="contacto" data-wa>Agenda tu cita</a>
-            <a class="btn btn--outline" href="servicios">Ver servicios</a>
+            <a class="btn btn--primary" href="contacto" data-wa>
+              <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#i-wa"/></svg>
+              Agendar cita por WhatsApp
+            </a>
+            <a class="link-quiet" href="servicios">Ver servicios</a>
           </div>
-          <ul class="hero__badges">
-            <li>Tumores de piel</li>
-            <li>Láser</li>
-            <li>Dermatología clínica</li>
-            <li>Estética facial</li>
+          <ul class="disciplines" aria-label="Áreas">
+            <li>Clínica</li>
+            <li>Quirúrgica</li>
+            <li>Estética</li>
+            <li>Dermatopatología</li>
           </ul>
         </div>
-        <div class="hero__photo ph reveal">
-          <img src="assets/img/hero.jpg" alt="Cuidado dermatológico de la piel del rostro"><!-- ⚠️ reemplazar por foto de la Dra. -->
+
+        <!-- Lente: foto principal en círculo + aumento tipo dermatoscopio -->
+        <div class="lens" aria-hidden="false">
+          <div class="lens__ring"></div>
+          <div class="lens__main">
+            <img src="assets/img/hero.jpg" alt="Rostro de mujer con piel cuidada" width="1400" height="933"><!-- ⚠️ reemplazar por foto de la Dra. -->
+          </div>
+          <div class="lens__zoom" style="--zoom-img:url('assets/img/hero.jpg')" aria-hidden="true"></div>
+          <svg class="lens__swash" viewBox="0 0 600 600" aria-hidden="true"><path d="M150 560 C 260 650, 500 640, 640 430" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ESPECIALIDAD: TUMORES ================= -->
+    <section class="specialty" id="tumores">
+      <div class="container specialty__grid">
+        <figure class="specialty__media">
+          <img src="assets/img/tumores.webp" alt="Análisis de lesiones de la piel" loading="lazy" width="1024" height="683">
+        </figure>
+        <div class="specialty__text">
+          <h2>Tumores de piel</h2>
+          <p>La mayoría de cánceres de piel se curan cuando se detectan a tiempo. Revisamos tus lunares y manchas con dermatoscopia, confirmamos el diagnóstico con estudio dermatopatológico y, si hace falta, retiramos la lesión en el consultorio.</p>
+          <ul class="specialty__list">
+            <li>Revisión de lunares con dermatoscopia</li>
+            <li>Biopsia y diagnóstico dermatopatológico</li>
+            <li>Cirugía dermatológica</li>
+            <li>Seguimiento de pacientes con antecedentes</li>
+          </ul>
+          <a class="btn btn--light" href="contacto" data-wa="Hola Dra. Belén, quisiera agendar una revisión de lunares.">Agendar revisión de lunares</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ÍNDICE DE SERVICIOS ================= -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-intro">
+          <h2>Servicios</h2>
+          <p>Elige un área para ver los tratamientos que incluye.</p>
+        </div>
+
+        <ul class="svc-index">
+          <li>
+            <a class="svc-row" href="servicios#clinica">
+              <span class="svc-row__name">Dermatología clínica</span>
+              <span class="svc-row__desc">Acné, rosácea, dermatitis, psoriasis, manchas, cabello y uñas.</span>
+              <span class="svc-row__thumb"><img src="assets/img/clinica.jpg" alt="" loading="lazy"></span>
+            </a>
+          </li>
+          <li>
+            <a class="svc-row" href="servicios#laser">
+              <span class="svc-row__name">Láser</span>
+              <span class="svc-row__desc">Manchas, cicatrices, rejuvenecimiento y lesiones vasculares.</span>
+              <span class="svc-row__thumb"><img src="assets/img/laser.jpg" alt="" loading="lazy"></span>
+            </a>
+          </li>
+          <li>
+            <a class="svc-row" href="servicios#estetica">
+              <span class="svc-row__name">Estética facial</span>
+              <span class="svc-row__desc">Toxina botulínica, rellenos y bioestimuladores con resultados naturales.</span>
+              <span class="svc-row__thumb"><img src="assets/img/estetica.jpg" alt="" loading="lazy"></span>
+            </a>
+          </li>
+          <li>
+            <a class="svc-row" href="servicios#limpiezas">
+              <span class="svc-row__name">Limpiezas faciales</span>
+              <span class="svc-row__desc">Limpieza profunda según tu tipo de piel, con supervisión médica.</span>
+              <span class="svc-row__thumb"><img src="assets/img/limpiezas.jpg" alt="" loading="lazy"></span>
+            </a>
+          </li>
+          <li>
+            <a class="svc-row" href="servicios#tumores">
+              <span class="svc-row__name">Tumores de piel</span>
+              <span class="svc-row__desc">Dermatoscopia, biopsias y cirugía de lesiones benignas y malignas.</span>
+              <span class="svc-row__thumb"><img src="assets/img/tumores.webp" alt="" loading="lazy"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE LA DRA. ================= -->
+    <section class="about-band">
+      <div class="container about-band__grid">
+        <figure class="about-band__photo">
+          <img src="assets/img/doctora.jpg" alt="Dra. Belén Mendoza en su consultorio" loading="lazy"><!-- ⚠️ reemplazar por foto de la Dra. -->
+        </figure>
+        <div class="about-band__text">
+          <img class="about-band__mono" src="assets/brand/monograma-blanco.png" alt="" width="400" height="208" loading="lazy">
+          <h2>Dra. Belén Mendoza Macías</h2>
+          <p>Dermatóloga formada en Brasil, con posespecialidad en [área]. Combina la consulta clínica con la cirugía dermatológica y el diagnóstico dermatopatológico, para que cada lesión tenga una respuesta clara.</p>
+          <dl class="creds">
+            <div><dt>Especialidad</dt><dd>Dermatología · [Universidad], Brasil</dd></div>
+            <div><dt>Posespecialidad</dt><dd>[Área] · [Institución]</dd></div>
+            <div><dt>Miembro de</dt><dd>[Sociedad de Dermatología]</dd></div>
+          </dl>
+          <a class="btn btn--outline-light" href="dra-belen-mendoza">Conocer su trayectoria</a>
         </div>
       </div>
     </section>
 
     <!-- ================= NOTICIAS (CARRUSEL) ================= -->
-    <section class="section section--alt" id="noticias">
+    <section class="section" id="noticias">
       <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Novedades</span>
-          <h2>Últimas noticias</h2>
-          <p>Congresos, conferencias y actividades académicas de la Dra. Belén.</p>
+        <div class="section-intro">
+          <h2>Novedades</h2>
+          <p>Congresos, conferencias y actividades académicas.</p>
         </div>
 
-        <div class="carousel reveal">
+        <div class="carousel">
           <div class="carousel__track">
             <!-- Para agregar una noticia: copia un bloque <article> completo -->
             <article class="carousel__slide">
-              <div class="carousel__media ph"><img src="assets/img/noticia-congreso.webp" alt="Conferencia en un congreso médico" loading="lazy"></div>
+              <div class="carousel__media"><img src="assets/img/noticia-congreso.webp" alt="Conferencia en un congreso médico" loading="lazy"></div>
               <div class="carousel__body">
-                <span class="carousel__tag">Congreso</span>
-                <time datetime="2026-09">Septiembre 2026</time>
+                <p class="carousel__meta"><span>Congreso</span> <time datetime="2026-09">septiembre 2026</time></p>
                 <h3>Título del congreso</h3>
-                <p>Breve descripción de la participación de la Dra. en el congreso: tema expuesto, ciudad, organizadores.</p>
+                <p>Breve descripción de la participación de la Dra.: tema expuesto, ciudad y organizadores.</p>
               </div>
             </article>
             <article class="carousel__slide">
-              <div class="carousel__media ph"><img src="assets/img/noticia-charla.jpg" alt="Auditorio durante una charla" loading="lazy"></div>
+              <div class="carousel__media"><img src="assets/img/noticia-charla.jpg" alt="Auditorio durante una charla" loading="lazy"></div>
               <div class="carousel__body">
-                <span class="carousel__tag">Charla</span>
-                <time datetime="2026-07">Julio 2026</time>
-                <h3>Charla sobre prevención del cáncer de piel</h3>
-                <p>Descripción de la charla, a quién iba dirigida y principales mensajes.</p>
+                <p class="carousel__meta"><span>Charla</span> <time datetime="2026-07">julio 2026</time></p>
+                <h3>Prevención del cáncer de piel</h3>
+                <p>A quién iba dirigida la charla y cuáles fueron los mensajes principales.</p>
               </div>
             </article>
             <article class="carousel__slide">
-              <div class="carousel__media ph"><img src="assets/img/noticia-formacion.jpg" alt="Médicos en una capacitación" loading="lazy"></div>
+              <div class="carousel__media"><img src="assets/img/noticia-formacion.jpg" alt="Médicos en una capacitación" loading="lazy"></div>
               <div class="carousel__body">
-                <span class="carousel__tag">Formación</span>
-                <time datetime="2026-05">Mayo 2026</time>
-                <h3>Nueva certificación / curso</h3>
+                <p class="carousel__meta"><span>Formación</span> <time datetime="2026-05">mayo 2026</time></p>
+                <h3>Nueva certificación</h3>
                 <p>Descripción de la capacitación o certificación obtenida.</p>
               </div>
             </article>
           </div>
-          <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
-          <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
-          <div class="carousel__dots"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= SERVICIOS (TARJETAS) ================= -->
-    <section class="section" id="servicios">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Servicios</span>
-          <h2>¿Cómo podemos ayudarte?</h2>
-          <p>Elige un servicio para conocer en detalle los tratamientos disponibles.</p>
-        </div>
-
-        <div class="cards">
-          <a href="servicios#tumores" class="card card--featured reveal">
-            <div class="card__media ph"><img src="assets/img/tumores.webp" alt="Revisión de lesiones de la piel" loading="lazy"></div>
-            <div class="card__body">
-              <h3>Tumores de piel</h3>
-              <p>Detección temprana, dermatoscopia, biopsias y cirugía de lesiones benignas y malignas.</p>
-              <span class="card__more">Ver más</span>
-            </div>
-          </a>
-          <a href="servicios#clinica" class="card reveal">
-            <div class="card__media ph"><img src="assets/img/clinica.jpg" alt="Consulta dermatológica" loading="lazy"></div>
-            <div class="card__body">
-              <h3>Dermatología clínica</h3>
-              <p>Acné, rosácea, dermatitis, psoriasis, manchas, uñas, cabello y más.</p>
-              <span class="card__more">Ver más</span>
-            </div>
-          </a>
-          <a href="servicios#laser" class="card reveal">
-            <div class="card__media ph"><img src="assets/img/laser.jpg" alt="Tratamiento con láser para la piel" loading="lazy"></div>
-            <div class="card__body">
-              <h3>Láser</h3>
-              <p>Tratamientos con láser para manchas, cicatrices, rejuvenecimiento y lesiones vasculares.</p>
-              <span class="card__more">Ver más</span>
-            </div>
-          </a>
-          <a href="servicios#estetica" class="card reveal">
-            <div class="card__media ph"><img src="assets/img/estetica.jpg" alt="Estética facial" loading="lazy"></div>
-            <div class="card__body">
-              <h3>Estética facial</h3>
-              <p>Rejuvenecimiento, toxina botulínica, rellenos y bioestimuladores con criterio médico.</p>
-              <span class="card__more">Ver más</span>
-            </div>
-          </a>
-          <a href="servicios#limpiezas" class="card reveal">
-            <div class="card__media ph"><img src="assets/img/limpiezas.jpg" alt="Limpieza facial" loading="lazy"></div>
-            <div class="card__body">
-              <h3>Limpiezas faciales</h3>
-              <p>Limpiezas profundas adaptadas a tu tipo de piel.</p>
-              <span class="card__more">Ver más</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= SOBRE LA DRA. (RESUMEN) ================= -->
-    <section class="section section--alt">
-      <div class="container split">
-        <div class="split__media ph reveal"><img src="assets/img/doctora.jpg" alt="Dermatóloga en su consultorio" class="pos-top" loading="lazy"></div>
-        <div class="reveal">
-          <span class="eyebrow">Conoce a la doctora</span>
-          <h2>Dra. Belén Mendoza</h2>
-          <p>Médica dermatóloga con especialidad realizada en Brasil y posespecialidad en <strong>[área]</strong>. Miembro de la <strong>[Sociedad de Dermatología]</strong>.</p>
-          <p>Su práctica se enfoca en el diagnóstico y tratamiento de tumores de piel, sin dejar de lado la dermatología clínica y la estética.</p>
-          <div class="stats">
-            <div class="stat"><strong>+X</strong><span>años de experiencia</span></div>
-            <div class="stat"><strong>+X</strong><span>pacientes atendidos</span></div>
-            <div class="stat"><strong>X</strong><span>congresos internacionales</span></div>
+          <div class="carousel__controls">
+            <button class="carousel__btn carousel__btn--prev" aria-label="Noticia anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+            <div class="carousel__dots"></div>
+            <button class="carousel__btn carousel__btn--next" aria-label="Noticia siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
           </div>
-          <a class="btn btn--primary" href="dra-belen-mendoza">Conoce su trayectoria</a>
         </div>
       </div>
     </section>
 
     <!-- ================= CASOS (VISTA PREVIA) ================= -->
-    <section class="section">
+    <section class="section section--tint">
       <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow">Resultados</span>
+        <div class="section-intro">
           <h2>Casos reales</h2>
-          <p>Algunos resultados de tratamientos realizados, publicados con el consentimiento de los pacientes.</p>
+          <p>Desliza sobre cada imagen para comparar. Publicados con autorización de los pacientes.</p>
         </div>
         <div class="cases">
-          <article class="case reveal">
+          <article class="case">
             <div class="ba">
               <div class="ba__img ph">Antes</div>
               <div class="ba__img ba__img--after ph">Después</div>
@@ -225,7 +248,7 @@
             </div>
             <div class="case__body"><h3>Acné</h3><p>Descripción breve del tratamiento.</p></div>
           </article>
-          <article class="case reveal">
+          <article class="case">
             <div class="ba">
               <div class="ba__img ph">Antes</div>
               <div class="ba__img ba__img--after ph">Después</div>
@@ -234,9 +257,9 @@
               <span class="ba__handle"></span>
               <input class="ba__range" type="range" min="0" max="100" value="50" aria-label="Comparar antes y después">
             </div>
-            <div class="case__body"><h3>Manchas – Láser</h3><p>Descripción breve del tratamiento.</p></div>
+            <div class="case__body"><h3>Manchas con láser</h3><p>Descripción breve del tratamiento.</p></div>
           </article>
-          <article class="case reveal">
+          <article class="case">
             <div class="ba">
               <div class="ba__img ph">Antes</div>
               <div class="ba__img ba__img--after ph">Después</div>
@@ -248,16 +271,19 @@
             <div class="case__body"><h3>Rejuvenecimiento facial</h3><p>Descripción breve del tratamiento.</p></div>
           </article>
         </div>
-        <p style="text-align:center;margin-top:40px"><a class="btn btn--outline" href="casos">Ver todos los casos</a></p>
+        <p class="center-link"><a class="btn btn--outline" href="casos">Ver todos los casos</a></p>
       </div>
     </section>
 
     <!-- ================= CTA ================= -->
     <section class="cta-band">
       <div class="container">
-        <h2>¿Notaste un lunar o mancha que cambió?</h2>
-        <p>La detección temprana marca la diferencia. Agenda una valoración con la Dra. Belén.</p>
-        <a class="btn btn--wa" href="contacto" data-wa="Hola Dra. Belén, quisiera agendar una revisión de lunares.">Escríbenos por WhatsApp</a>
+        <h2>¿Un lunar cambió de forma, color o tamaño?</h2>
+        <p>Es motivo suficiente para revisarlo. Escríbenos y te damos una cita.</p>
+        <a class="btn btn--primary" href="contacto" data-wa="Hola Dra. Belén, quisiera agendar una revisión de lunares.">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#i-wa"/></svg>
+          Escribir por WhatsApp
+        </a>
       </div>
     </section>
 
@@ -298,7 +324,7 @@
       <div>
         <h4>Contacto</h4>
         <ul>
-          <li>[Dirección del consultorio]</li>
+          <li><a href="https://maps.app.goo.gl/tLq8sHxndpyEuzyE6" target="_blank" rel="noopener">Manta, Manabí (ver mapa)</a></li>
           <li><a href="contacto" data-wa>WhatsApp: +593 97 989 3430</a></li>
           <li>Lun – Vie: 10:00 – 19:00</li>
         </ul>

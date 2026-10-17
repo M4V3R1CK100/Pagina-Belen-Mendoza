@@ -17,10 +17,11 @@
   <meta property="og:image" content="https://DOMINIO.com/assets/brand/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="servicios">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="i-wa" viewBox="0 0 32 32"><path d="M16 .5C7.4.5.5 7.4.5 16c0 2.7.7 5.4 2.1 7.8L.5 31.5l7.9-2.1c2.3 1.3 4.9 1.9 7.6 1.9 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28.2c-2.4 0-4.7-.6-6.8-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.7 20.6 3 18.3 3 16 3 8.8 8.8 3 16 3s13 5.8 13 13-5.8 12.7-13 12.7zm7.1-9.5c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.3-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.7-.9-.7h-.7c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.3 2.7 4.2 6.6 5.9.9.4 1.7.6 2.2.8.9.3 1.8.3 2.5.2.8-.1 2.3-.9 2.6-1.9.3-.9.3-1.7.2-1.9-.1-.1-.4-.2-.8-.4z"/></symbol></svg>
 
   <!-- ================= HEADER ================= -->
   <header class="site-header">
@@ -51,7 +52,7 @@
           <li><a href="casos" class="nav__link" data-page="casos">Casos</a></li>
           <li><a href="contacto" class="nav__link" data-page="contacto">Contacto</a></li>
         </ul>
-        <a class="btn btn--wa header-cta" href="contacto" data-wa>
+        <a class="btn btn--primary header-cta" href="contacto" data-wa>
           <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 .5C7.4.5.5 7.4.5 16c0 2.7.7 5.4 2.1 7.8L.5 31.5l7.9-2.1c2.3 1.3 4.9 1.9 7.6 1.9 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28.2c-2.4 0-4.7-.6-6.8-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5C3.7 20.6 3 18.3 3 16 3 8.8 8.8 3 16 3s13 5.8 13 13-5.8 12.7-13 12.7zm7.1-9.5c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.3-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.7-.9-.7h-.7c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.3 2.7 4.2 6.6 5.9.9.4 1.7.6 2.2.8.9.3 1.8.3 2.5.2.8-.1 2.3-.9 2.6-1.9.3-.9.3-1.7.2-1.9-.1-.1-.4-.2-.8-.4z"/></svg>
           Agendar cita
         </a>
@@ -61,11 +62,10 @@
 
   <main>
 
-    <section class="page-hero">
+    <section class="page-hero page-hero--left">
       <div class="container">
-        <span class="eyebrow">Servicios</span>
-        <h1>Tratamientos dermatológicos</h1>
-        <p>Desde el diagnóstico de enfermedades de la piel hasta procedimientos con láser y estética facial, siempre con criterio médico.</p>
+        <h1>Servicios</h1>
+        <p>Desde el diagnóstico de una lesión hasta el láser y la estética facial, siempre con criterio médico.</p>
       </div>
     </section>
 
@@ -84,34 +84,37 @@
          cambia el id y agrega el enlace en la barra de arriba, el submenú y el footer. -->
 
     <!-- ================= TUMORES ================= -->
-    <section class="service" id="tumores">
-      <div class="container split">
-        <div class="split__media ph reveal"><img src="assets/img/tumores.webp" alt="Análisis de lesiones de la piel"></div>
-        <div class="reveal">
-          <span class="eyebrow">Especialidad</span>
+    <section class="service service--dark" id="tumores">
+      <div class="container service__grid">
+        <figure class="service__media">
+          <img src="assets/img/tumores.webp" alt="Análisis de lesiones de la piel" width="1024" height="683">
+        </figure>
+        <div class="service__text">
+          <p class="service__tag">Especialidad</p>
           <h2>Tumores de piel</h2>
-          <p>Diagnóstico temprano y tratamiento de lesiones benignas y malignas de la piel, incluyendo carcinoma basocelular, espinocelular y melanoma.</p>
+          <p>Diagnóstico temprano y tratamiento de lesiones benignas y malignas: carcinoma basocelular, carcinoma espinocelular, melanoma, queratosis y quistes.</p>
           <ul class="treatments">
             <li>Revisión de lunares</li>
-            <li>Dermatoscopia digital</li>
+            <li>Dermatoscopia</li>
             <li>Biopsia de piel</li>
+            <li>Estudio dermatopatológico</li>
             <li>Cirugía dermatológica</li>
-            <li>Extirpación de lesiones</li>
             <li>Seguimiento oncológico</li>
           </ul>
-          <a class="btn btn--wa" href="contacto" data-wa="Hola Dra. Belén, quisiera información sobre revisión de tumores / lunares.">Consultar por WhatsApp</a>
+          <a class="btn btn--light" href="contacto" data-wa="Hola Dra. Belén, quisiera información sobre revisión de lunares o tumores de piel.">Consultar por WhatsApp</a>
         </div>
       </div>
     </section>
 
     <!-- ================= CLÍNICA ================= -->
     <section class="service" id="clinica">
-      <div class="container split split--reverse">
-        <div class="split__media ph reveal"><img src="assets/img/s-clinica.jpg" alt="Consulta de dermatología clínica" loading="lazy"></div>
-        <div class="reveal">
-          <span class="eyebrow">Consulta</span>
+      <div class="container service__grid service__grid--reverse">
+        <figure class="service__media">
+          <img src="assets/img/s-clinica.jpg" alt="Consulta de dermatología clínica" loading="lazy">
+        </figure>
+        <div class="service__text">
           <h2>Dermatología clínica</h2>
-          <p>Diagnóstico y tratamiento de enfermedades de la piel, cabello y uñas en niños y adultos.</p>
+          <p>Diagnóstico y tratamiento de enfermedades de la piel, el cabello y las uñas, en niños y adultos.</p>
           <ul class="treatments">
             <li>Acné</li>
             <li>Rosácea</li>
@@ -119,42 +122,43 @@
             <li>Psoriasis</li>
             <li>Manchas y melasma</li>
             <li>Caída del cabello</li>
-            <li>Hongos y uñas</li>
+            <li>Hongos en uñas</li>
             <li>Verrugas</li>
           </ul>
-          <a class="btn btn--wa" href="contacto" data-wa="Hola Dra. Belén, quisiera agendar una consulta dermatológica.">Consultar por WhatsApp</a>
+          <a class="btn btn--primary" href="contacto" data-wa="Hola Dra. Belén, quisiera agendar una consulta dermatológica.">Consultar por WhatsApp</a>
         </div>
       </div>
     </section>
 
     <!-- ================= LÁSER ================= -->
-    <section class="service" id="laser">
-      <div class="container split">
-        <div class="split__media ph reveal"><img src="assets/img/s-laser.jpg" alt="Piel luminosa tras tratamiento láser" loading="lazy"></div>
-        <div class="reveal">
-          <span class="eyebrow">Tecnología</span>
+    <section class="service service--tint" id="laser">
+      <div class="container service__grid">
+        <figure class="service__media">
+          <img src="assets/img/s-laser.jpg" alt="Piel luminosa tras tratamiento láser" loading="lazy">
+        </figure>
+        <div class="service__text">
           <h2>Láser</h2>
-          <p>[Describir los equipos láser disponibles y sus aplicaciones.]</p>
+          <p>[Describir los equipos láser disponibles y para qué se usa cada uno.]</p>
           <ul class="treatments">
             <li>Manchas</li>
             <li>Cicatrices de acné</li>
             <li>Rejuvenecimiento</li>
             <li>Lesiones vasculares</li>
-            <li>[Otro]</li>
           </ul>
-          <a class="btn btn--wa" href="contacto" data-wa="Hola Dra. Belén, quisiera información sobre tratamientos con láser.">Consultar por WhatsApp</a>
+          <a class="btn btn--primary" href="contacto" data-wa="Hola Dra. Belén, quisiera información sobre tratamientos con láser.">Consultar por WhatsApp</a>
         </div>
       </div>
     </section>
 
     <!-- ================= ESTÉTICA ================= -->
     <section class="service" id="estetica">
-      <div class="container split split--reverse">
-        <div class="split__media ph reveal"><img src="assets/img/s-estetica.jpg" alt="Estética facial" loading="lazy"></div>
-        <div class="reveal">
-          <span class="eyebrow">Estética</span>
+      <div class="container service__grid service__grid--reverse">
+        <figure class="service__media">
+          <img src="assets/img/s-estetica.jpg" alt="Estética facial" loading="lazy">
+        </figure>
+        <div class="service__text">
           <h2>Estética facial</h2>
-          <p>Procedimientos para rejuvenecer y mejorar la calidad de la piel con resultados naturales.</p>
+          <p>Procedimientos para rejuvenecer y mejorar la calidad de la piel, buscando resultados naturales.</p>
           <ul class="treatments">
             <li>Toxina botulínica</li>
             <li>Ácido hialurónico</li>
@@ -162,26 +166,26 @@
             <li>Peelings químicos</li>
             <li>Mesoterapia</li>
           </ul>
-          <a class="btn btn--wa" href="contacto" data-wa="Hola Dra. Belén, quisiera información sobre estética facial.">Consultar por WhatsApp</a>
+          <a class="btn btn--primary" href="contacto" data-wa="Hola Dra. Belén, quisiera información sobre estética facial.">Consultar por WhatsApp</a>
         </div>
       </div>
     </section>
 
     <!-- ================= LIMPIEZAS ================= -->
-    <section class="service" id="limpiezas">
-      <div class="container split">
-        <div class="split__media ph reveal"><img src="assets/img/s-limpiezas.jpg" alt="Limpieza facial" loading="lazy"></div>
-        <div class="reveal">
-          <span class="eyebrow">Cuidado</span>
+    <section class="service service--tint" id="limpiezas">
+      <div class="container service__grid">
+        <figure class="service__media">
+          <img src="assets/img/s-limpiezas.jpg" alt="Limpieza facial" loading="lazy">
+        </figure>
+        <div class="service__text">
           <h2>Limpiezas faciales</h2>
-          <p>Limpiezas profundas personalizadas según tu tipo de piel, realizadas bajo supervisión dermatológica.</p>
+          <p>Limpiezas profundas según tu tipo de piel, hechas bajo supervisión dermatológica.</p>
           <ul class="treatments">
             <li>Limpieza profunda</li>
             <li>Hidratación</li>
             <li>Limpieza para piel con acné</li>
-            <li>[Otra]</li>
           </ul>
-          <a class="btn btn--wa" href="contacto" data-wa="Hola Dra. Belén, quisiera agendar una limpieza facial.">Consultar por WhatsApp</a>
+          <a class="btn btn--primary" href="contacto" data-wa="Hola Dra. Belén, quisiera agendar una limpieza facial.">Consultar por WhatsApp</a>
         </div>
       </div>
     </section>
@@ -223,7 +227,7 @@
       <div>
         <h4>Contacto</h4>
         <ul>
-          <li>[Dirección del consultorio]</li>
+          <li><a href="https://maps.app.goo.gl/tLq8sHxndpyEuzyE6" target="_blank" rel="noopener">Manta, Manabí (ver mapa)</a></li>
           <li><a href="contacto" data-wa>WhatsApp: +593 97 989 3430</a></li>
           <li>Lun – Vie: 10:00 – 19:00</li>
         </ul>
