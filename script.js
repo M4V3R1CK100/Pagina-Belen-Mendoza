@@ -3,7 +3,7 @@
    ========================================================= */
 
 // ⚠️ CAMBIAR: número de WhatsApp con código de país, sin "+" ni espacios
-const WHATSAPP_NUMBER = "593000000000";
+const WHATSAPP_NUMBER = "593979893430";
 const WHATSAPP_DEFAULT_MSG = "Hola Dra. Belén, me gustaría agendar una cita.";
 
 document.addEventListener("DOMContentLoaded", () => {
