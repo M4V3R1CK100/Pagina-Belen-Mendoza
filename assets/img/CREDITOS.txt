@@ -25,6 +25,8 @@ s-clinica          https://www.pexels.com/photo/6475982/
 estetica           https://www.pexels.com/photo/4586711/
 s-estetica         https://www.pexels.com/photo/7581590/
 capilares          https://www.pexels.com/photo/12474260/
-s-capilares        https://www.pexels.com/photo/6333587/
+s-capilares        https://www.pexels.com/photo/9755382/
+limpiezas          https://www.pexels.com/photo/37072271/
+s-limpiezas        https://www.pexels.com/photo/5069589/
 
 Fotos propias de la Dra. Belén Mendoza: assets/img/dra/, assets/img/novedades/, s-laser.jpg, cirugias.jpg
