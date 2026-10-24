@@ -502,52 +502,30 @@ p  { margin: 0 0 1em; }
 .filters button:hover { border-color: var(--caramel); }
 .filters button.is-active { background: var(--cacao); border-color: var(--cacao); color: #fff; }
 
-.cases { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 32px; }
+.cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
 .case { background: var(--surface); }
 .case[hidden] { display: none; }
-.case__body { padding: 20px 22px 24px; }
-.case__body h3 { font-size: 1.35rem; margin-bottom: 4px; }
-.case__body p { color: var(--ink-soft); font-size: .95rem; margin: 0; }
 
-/* Comparador antes / después */
-.ba { position: relative; aspect-ratio: 4 / 3; overflow: hidden; user-select: none; }
-.ba__img { position: absolute; inset: 0; }
-.ba__img--after { clip-path: inset(0 0 0 var(--pos, 50%)); background: var(--rose); color: var(--cacao); }
-.ba__label {
+/* Antes y después lado a lado: las fotos no siempre tienen el mismo encuadre */
+.case__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; background: var(--surface); }
+.case__pair figure { position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: var(--rose-tint); }
+.case__pair img { width: 100%; height: 100%; object-fit: cover; }
+.case__pair figcaption {
   position: absolute;
-  top: 14px;
-  z-index: 2;
-  padding: 3px 10px;
-  font-size: .8rem;
+  left: 12px;
+  bottom: 12px;
+  padding: 3px 12px;
+  font-size: .82rem;
   color: #fff;
-  background: rgba(46, 36, 33, .7);
+  background: rgba(46, 36, 33, .72);
 }
-.ba__label--before { left: 14px; }
-.ba__label--after { right: 14px; }
-.ba__handle {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: var(--pos, 50%);
-  width: 2px;
-  background: #fff;
-  transform: translateX(-50%);
-  pointer-events: none;
-  z-index: 2;
-}
-.ba__handle::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 36px;
-  height: 36px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(46, 36, 33, .25);
-}
-.ba__range { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; z-index: 3; }
+.case__pair figure + figure figcaption { background: var(--caramel-deep); }
+
+.case__body { padding: 20px 24px 24px; }
+.case__tag { margin: 0 0 6px; font-size: .85rem; color: var(--caramel-deep); }
+.case__body h3 { font-size: 1.4rem; margin-bottom: 6px; }
+.case__body p:last-child { color: var(--ink-soft); font-size: .95rem; margin: 0; }
+
 .note { text-align: center; font-size: .9rem; color: var(--ink-soft); margin-top: 40px; }
 
 /* ---------- Página Contacto ---------- */

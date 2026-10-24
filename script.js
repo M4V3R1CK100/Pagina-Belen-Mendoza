@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setupReel();
   setupServiceNav();
   setupCaseFilters();
-  setupBeforeAfter();
   setYear();
 });
 
@@ -162,16 +161,6 @@ function setupCaseFilters() {
         c.hidden = filter !== "todos" && c.dataset.category !== filter;
       });
     });
-  });
-}
-
-/* ---------- Comparador antes / después ---------- */
-function setupBeforeAfter() {
-  document.querySelectorAll(".ba").forEach((ba) => {
-    const range = ba.querySelector(".ba__range");
-    const update = () => ba.style.setProperty("--pos", `${range.value}%`);
-    range.addEventListener("input", update);
-    update();
   });
 }
 
