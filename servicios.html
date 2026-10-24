@@ -42,10 +42,11 @@
               <svg class="nav__caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
             </a>
             <ul class="submenu">
+              <li><a href="servicios#cirugias">Cirugías</a></li>
               <li><a href="servicios#clinica">Dermatología clínica</a></li>
-              <li><a href="servicios#tumores">Tumores de piel</a></li>
               <li><a href="servicios#laser">Láser</a></li>
               <li><a href="servicios#estetica">Estética facial</a></li>
+              <li><a href="servicios#capilares">Tratamientos capilares</a></li>
               <li><a href="servicios#limpiezas">Limpiezas faciales</a></li>
             </ul>
           </li>
@@ -72,10 +73,11 @@
     <!-- Barra de acceso rápido a cada servicio -->
     <nav class="service-nav" aria-label="Servicios">
       <ul>
-        <li><a href="#tumores">Tumores de piel</a></li>
+        <li><a href="#cirugias">Cirugías</a></li>
         <li><a href="#clinica">Dermatología clínica</a></li>
         <li><a href="#laser">Láser</a></li>
         <li><a href="#estetica">Estética facial</a></li>
+        <li><a href="#capilares">Tratamientos capilares</a></li>
         <li><a href="#limpiezas">Limpiezas faciales</a></li>
       </ul>
     </nav>
@@ -83,25 +85,25 @@
     <!-- Para agregar un servicio: copia una <section class="service"> completa,
          cambia el id y agrega el enlace en la barra de arriba, el submenú y el footer. -->
 
-    <!-- ================= TUMORES ================= -->
-    <section class="service service--dark" id="tumores">
+    <!-- ================= CIRUGÍAS ================= -->
+    <section class="service service--dark" id="cirugias">
       <div class="container service__grid">
         <figure class="service__media">
-          <img src="assets/img/tumores.webp" alt="Análisis de lesiones de la piel" width="1024" height="683">
+          <img src="assets/img/cirugias.webp" alt="Procedimiento de cirugía dermatológica" width="1024" height="683">
         </figure>
         <div class="service__text">
           <p class="service__tag">Especialidad</p>
-          <h2>Tumores de piel</h2>
-          <p>Diagnóstico temprano y tratamiento de lesiones benignas y malignas: carcinoma basocelular, carcinoma espinocelular, melanoma, queratosis y quistes.</p>
+          <h2>Cirugías</h2>
+          <p>Extirpación de tumores de piel benignos y malignos (carcinoma basocelular, carcinoma espinocelular, melanoma), lunares, quistes y lipomas. Cada pieza se estudia al microscopio para confirmar el diagnóstico.</p>
           <ul class="treatments">
-            <li>Revisión de lunares</li>
-            <li>Dermatoscopia</li>
+            <li>Cirugía de tumores de piel</li>
+            <li>Extirpación de lunares</li>
+            <li>Quistes y lipomas</li>
             <li>Biopsia de piel</li>
             <li>Estudio dermatopatológico</li>
-            <li>Cirugía dermatológica</li>
-            <li>Seguimiento oncológico</li>
+            <li>Revisión de lunares con dermatoscopia</li>
           </ul>
-          <a class="btn btn--light" href="contacto" data-wa="Hola Dra. Belén, quisiera información sobre revisión de lunares o tumores de piel.">Consultar por WhatsApp</a>
+          <a class="btn btn--light" href="contacto" data-wa="Hola Dra. Belén, quisiera información sobre una cirugía dermatológica.">Consultar por WhatsApp</a>
         </div>
       </div>
     </section>
@@ -121,7 +123,6 @@
             <li>Dermatitis</li>
             <li>Psoriasis</li>
             <li>Manchas y melasma</li>
-            <li>Caída del cabello</li>
             <li>Hongos en uñas</li>
             <li>Verrugas</li>
           </ul>
@@ -171,9 +172,32 @@
       </div>
     </section>
 
-    <!-- ================= LIMPIEZAS ================= -->
-    <section class="service service--tint" id="limpiezas">
+    <!-- ================= CAPILARES ================= -->
+    <section class="service service--tint" id="capilares">
       <div class="container service__grid">
+        <figure class="service__media">
+          <img src="assets/img/capilares.jpg" alt="Cuidado del cabello" loading="lazy">
+        </figure>
+        <div class="service__text">
+          <h2>Tratamientos capilares</h2>
+          <p>Diagnóstico de la causa de la caída del cabello y tratamiento según cada caso, en mujeres y hombres.</p>
+          <ul class="treatments">
+            <li>Caída del cabello</li>
+            <li>Alopecia androgenética</li>
+            <li>Alopecia areata</li>
+            <li>Tricoscopia</li>
+            <li>Mesoterapia capilar</li>
+            <li>Plasma rico en plaquetas</li>
+            <li>Caspa y dermatitis seborreica</li>
+          </ul>
+          <a class="btn btn--primary" href="contacto" data-wa="Hola Dra. Belén, quisiera información sobre tratamientos capilares.">Consultar por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= LIMPIEZAS ================= -->
+    <section class="service" id="limpiezas">
+      <div class="container service__grid service__grid--reverse">
         <figure class="service__media">
           <img src="assets/img/s-limpiezas.jpg" alt="Limpieza facial" loading="lazy">
         </figure>
@@ -217,10 +241,11 @@
       <div>
         <h4>Servicios</h4>
         <ul>
-          <li><a href="servicios#tumores">Tumores de piel</a></li>
+          <li><a href="servicios#cirugias">Cirugías</a></li>
           <li><a href="servicios#clinica">Dermatología clínica</a></li>
           <li><a href="servicios#laser">Láser</a></li>
           <li><a href="servicios#estetica">Estética facial</a></li>
+          <li><a href="servicios#capilares">Tratamientos capilares</a></li>
           <li><a href="servicios#limpiezas">Limpiezas faciales</a></li>
         </ul>
       </div>

@@ -10,11 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
   setupWhatsAppLinks();
   setupNav();
   setupActiveLink();
-  setupCarousel();
+  setupReel();
   setupServiceNav();
   setupCaseFilters();
   setupBeforeAfter();
-  setupReveal();
   setYear();
 });
 
@@ -65,50 +64,73 @@ function setupActiveLink() {
   document.querySelectorAll(`.nav__link[data-page="${page}"]`).forEach((a) => a.classList.add("is-active"));
 }
 
-/* ---------- Carrusel de noticias ---------- */
-function setupCarousel() {
-  const carousel = document.querySelector(".carousel");
-  if (!carousel) return;
+/* ---------- Novedades: carrete ----------
+   Las miniaturas se crean solas a partir de cada <article class="reel__item">.
+   Avanza cada data-interval ms, se pausa con el cursor encima. */
+function setupReel() {
+  const reel = document.querySelector(".reel");
+  if (!reel) return;
 
-  const track = carousel.querySelector(".carousel__track");
-  const slides = [...track.children];
-  const dotsBox = carousel.querySelector(".carousel__dots");
+  const items = [...reel.querySelectorAll(".reel__item")];
+  const thumbsBox = reel.querySelector(".reel__thumbs");
+  const interval = Number(reel.dataset.interval) || 6000;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  reel.style.setProperty("--reel-time", `${interval}ms`);
   let index = 0;
   let timer;
 
-  slides.forEach((_, i) => {
-    const dot = document.createElement("button");
-    dot.setAttribute("aria-label", `Ir a la noticia ${i + 1}`);
-    dot.addEventListener("click", () => { go(i); restart(); });
-    dotsBox.appendChild(dot);
+  const thumbs = items.map((item, i) => {
+    const btn = document.createElement("button");
+    btn.className = "reel__thumb";
+    btn.setAttribute("role", "tab");
+    const img = item.querySelector("img");
+    const title = item.querySelector("h3")?.textContent || `Noticia ${i + 1}`;
+    btn.innerHTML = `<img src="${img.getAttribute("src")}" alt="" loading="lazy"><span></span>`;
+    btn.querySelector("span").textContent = title;
+    btn.setAttribute("aria-label", title);
+    btn.addEventListener("click", () => go(i));
+    thumbsBox.appendChild(btn);
+    return btn;
   });
-  const dots = [...dotsBox.children];
 
   function go(i) {
-    index = (i + slides.length) % slides.length;
-    track.style.transform = `translateX(-${index * 100}%)`;
-    dots.forEach((d, j) => d.classList.toggle("is-active", j === index));
-  }
-  function restart() {
-    clearInterval(timer);
-    timer = setInterval(() => go(index + 1), 6000);
+    index = (i + items.length) % items.length;
+    items.forEach((el, j) => el.classList.toggle("is-active", j === index));
+    thumbs.forEach((el, j) => {
+      el.classList.toggle("is-active", j === index);
+      el.setAttribute("aria-selected", j === index);
+    });
+    play();
   }
 
-  carousel.querySelector(".carousel__btn--prev").addEventListener("click", () => { go(index - 1); restart(); });
-  carousel.querySelector(".carousel__btn--next").addEventListener("click", () => { go(index + 1); restart(); });
-  carousel.addEventListener("mouseenter", () => clearInterval(timer));
-  carousel.addEventListener("mouseleave", restart);
+  function play() {
+    clearTimeout(timer);
+    if (reduceMotion) return;
+    // Reinicia la barra de progreso de la miniatura activa
+    reel.classList.remove("is-playing");
+    void reel.offsetWidth;
+    reel.classList.add("is-playing");
+    timer = setTimeout(() => go(index + 1), interval);
+  }
+
+  function pause() {
+    clearTimeout(timer);
+    reel.classList.remove("is-playing");
+  }
+
+  reel.addEventListener("mouseenter", pause);
+  reel.addEventListener("mouseleave", play);
 
   // Deslizar con el dedo en móvil
+  const stage = reel.querySelector(".reel__stage");
   let startX = 0;
-  track.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, { passive: true });
-  track.addEventListener("touchend", (e) => {
+  stage.addEventListener("touchstart", (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  stage.addEventListener("touchend", (e) => {
     const dx = e.changedTouches[0].clientX - startX;
-    if (Math.abs(dx) > 50) { go(index + (dx < 0 ? 1 : -1)); restart(); }
+    if (Math.abs(dx) > 50) go(index + (dx < 0 ? 1 : -1));
   });
 
   go(0);
-  restart();
 }
 
 /* ---------- Barra de servicios: resaltar la sección visible ---------- */
@@ -151,24 +173,6 @@ function setupBeforeAfter() {
     range.addEventListener("input", update);
     update();
   });
-}
-
-/* ---------- Animación al hacer scroll ---------- */
-function setupReveal() {
-  const items = document.querySelectorAll(".reveal");
-  if (!("IntersectionObserver" in window)) {
-    items.forEach((el) => el.classList.add("is-visible"));
-    return;
-  }
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  items.forEach((el) => observer.observe(el));
 }
 
 function setYear() {

@@ -214,112 +214,125 @@ p  { margin: 0 0 1em; }
 }
 .ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 
-/* ---------- Hero: el lente ---------- */
-.hero { padding: clamp(48px, 7vw, 96px) 0 clamp(72px, 9vw, 120px); overflow: hidden; }
-.hero__grid {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  align-items: center;
-  gap: clamp(40px, 6vw, 90px);
-}
+/* Línea pequeña sobre el titular y fila de áreas (igual que la línea del logo) */
 .hero__kicker { font-size: 1rem; color: var(--caramel-deep); margin-bottom: 18px; }
-.hero h1 { max-width: 9ch; margin-bottom: 28px; }
-.hero__lead { font-size: 1.15rem; color: var(--ink-soft); max-width: 46ch; }
-.hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; margin: 34px 0 44px; }
-
-/* Igual que la línea del logo: CLÍNICA | QUIRÚRGICA | ESTÉTICA */
 .disciplines { display: flex; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; color: var(--taupe); font-size: .95rem; }
 .disciplines li + li::before { content: ""; display: inline-block; width: 1px; height: .9em; margin: 0 14px; vertical-align: -1px; background: var(--rose); }
 
-.lens { position: relative; aspect-ratio: 1; width: 100%; max-width: 560px; justify-self: end; }
-.lens__main {
-  position: absolute;
-  inset: 6%;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--rose-tint);
-}
-.lens__main img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
-.lens__ring {
-  position: absolute;
-  inset: 0;
-  border: 1px solid var(--caramel);
-  border-radius: 50%;
-}
-/* Aumento: la misma foto ampliada, como a través de un dermatoscopio */
-.lens__zoom {
-  position: absolute;
-  width: 34%;
-  aspect-ratio: 1;
-  left: -6%;
-  bottom: 4%;
-  border-radius: 50%;
-  background-image: var(--zoom-img);
-  background-size: 560%;
-  background-position: 54% 38%;
-  border: 6px solid var(--porcelain);
-  box-shadow: 0 0 0 1px var(--caramel);
-}
-/* Trazo del monograma B.M rodeando el lente por fuera */
-.lens__swash { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; color: var(--caramel); pointer-events: none; }
-
-@media (prefers-reduced-motion: no-preference) {
-  .lens__ring { animation: ring-in 1.4s cubic-bezier(.2, .7, .2, 1) both; }
-  .lens__main { animation: lens-in 1.2s cubic-bezier(.2, .7, .2, 1) both; }
-  .lens__zoom { animation: zoom-in .9s .7s cubic-bezier(.2, .9, .3, 1.2) both; }
-  .lens__swash path { stroke-dasharray: 900; animation: draw 1.8s .3s ease-out both; }
-}
-@keyframes ring-in { from { transform: scale(.9); opacity: 0; } }
-@keyframes lens-in { from { transform: scale(1.04); opacity: 0; } }
-@keyframes zoom-in { from { transform: scale(.4); opacity: 0; } }
-@keyframes draw { from { stroke-dashoffset: 900; } to { stroke-dashoffset: 0; } }
-
-/* ---------- Especialidad (bloque cacao) ---------- */
-.specialty { background: var(--cacao); color: #fff; padding: clamp(72px, 10vw, 120px) 0; }
-.specialty__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 90px); align-items: center; }
-.specialty__media { aspect-ratio: 4 / 5; overflow: hidden; }
-.specialty__media img { width: 100%; height: 100%; object-fit: cover; }
-.specialty h2 { color: #fff; }
-.specialty p { color: rgba(255, 255, 255, .78); max-width: 52ch; }
-.specialty__list { list-style: none; margin: 30px 0 38px; padding: 0; border-top: 1px solid rgba(255, 255, 255, .16); }
-.specialty__list li {
-  padding: 14px 0 14px 28px;
+/* ---------- Portada: imagen a todo el ancho ---------- */
+.cover {
   position: relative;
-  border-bottom: 1px solid rgba(255, 255, 255, .16);
+  min-height: clamp(520px, 82vh, 780px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--cacao);
+  color: #fff;
 }
-.specialty__list li::before {
+.cover__media { position: absolute; inset: 0; }
+.cover__media img,
+.cover__media video { width: 100%; height: 100%; object-fit: cover; object-position: 70% 30%; }
+/* Degradado para que el texto se lea sobre cualquier foto */
+.cover__media::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 50%;
-  width: 11px;
-  height: 11px;
-  margin-top: -6px;
-  border: 1px solid var(--rose);
-  border-radius: 50%;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(46, 36, 33, .85) 0%, rgba(46, 36, 33, .6) 38%, rgba(46, 36, 33, 0) 72%);
 }
+.cover__content { position: relative; z-index: 1; padding-top: 64px; padding-bottom: 64px; }
+.cover__kicker { color: var(--rose); margin-bottom: 18px; }
+.cover h1 { color: #fff; max-width: 9ch; margin-bottom: 26px; }
+.cover__lead { font-size: 1.15rem; color: rgba(255, 255, 255, .86); max-width: 42ch; }
+.cover__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 28px; margin-top: 34px; }
+.link-light { color: #fff; font-weight: 500; border-bottom: 1px solid rgba(255, 255, 255, .6); padding-bottom: 2px; }
+.link-light:hover { border-color: #fff; }
 
-/* ---------- Índice de servicios ---------- */
-.svc-index { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-.svc-row {
+@media (prefers-reduced-motion: no-preference) {
+  .cover__media img { animation: kenburns 9s ease-out both; }
+  .cover__content > * { animation: rise 1s cubic-bezier(.2, .7, .2, 1) both; }
+  .cover__content > :nth-child(2) { animation-delay: .15s; }
+  .cover__content > :nth-child(3) { animation-delay: .3s; }
+  .cover__content > :nth-child(4) { animation-delay: .45s; }
+}
+@keyframes kenburns { from { transform: scale(1.18) translateX(2%); } to { transform: none; } }
+@keyframes rise { from { transform: translateY(24px); opacity: 0; } }
+
+/* ---------- La doctora (resumen en el Inicio) ---------- */
+.intro-dra { padding: clamp(72px, 10vw, 120px) 0; }
+.intro-dra__grid { display: grid; grid-template-columns: .85fr 1fr; gap: clamp(40px, 6vw, 96px); align-items: center; }
+.intro-dra__photo { position: relative; aspect-ratio: 4 / 5; }
+.intro-dra__photo::before { content: ""; position: absolute; inset: -6% 8% 6% -6%; background: var(--rose-tint); }
+.intro-dra__photo img { position: relative; width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+.intro-dra__lead { font-size: 1.12rem; color: var(--ink-soft); max-width: 50ch; }
+.facts { margin: 30px 0 34px; border-top: 1px solid var(--line); }
+.facts div { display: grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+.facts dt { color: var(--ink-soft); font-size: .92rem; }
+.facts dd { margin: 0; }
+
+/* ---------- Servicios en cuadros ---------- */
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.tile {
+  position: relative;
+  aspect-ratio: 4 / 3.4;
+  overflow: hidden;
+  background: var(--cacao);
+  color: #fff;
+}
+.tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2, .7, .2, 1); }
+.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(46, 36, 33, 0) 35%, rgba(46, 36, 33, .82) 100%);
+  transition: background-color .3s;
+}
+.tile__body { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 24px 26px; display: flex; flex-direction: column; gap: 4px; }
+.tile__name { font-family: var(--font-display); font-size: clamp(1.5rem, 2.4vw, 2rem); line-height: 1.1; }
+.tile__desc { font-size: .93rem; color: rgba(255, 255, 255, .82); }
+.tile:hover img { transform: scale(1.06); }
+.tile:hover::after { background-color: rgba(126, 82, 41, .25); }
+
+/* ---------- Novedades: carrete ---------- */
+.reel__stage { position: relative; aspect-ratio: 16 / 7.5; overflow: hidden; background: var(--cacao); }
+.reel__item { position: absolute; inset: 0; opacity: 0; visibility: hidden; transition: opacity .9s ease, visibility .9s; }
+.reel__item.is-active { opacity: 1; visibility: visible; }
+.reel__item img { width: 100%; height: 100%; object-fit: cover; }
+.reel__item::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(46, 36, 33, .88) 0%, rgba(46, 36, 33, .2) 55%, rgba(46, 36, 33, 0) 100%); }
+.reel__caption { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: clamp(24px, 4vw, 48px); color: #fff; max-width: 720px; }
+.reel__caption h3 { color: #fff; font-size: clamp(1.7rem, 3.2vw, 2.6rem); margin-bottom: 8px; }
+.reel__caption p { margin: 0; color: rgba(255, 255, 255, .85); }
+.reel__caption .reel__meta { display: flex; gap: 12px; margin-bottom: 10px; font-size: .93rem; }
+.reel__meta span { color: var(--rose); }
+@media (prefers-reduced-motion: no-preference) {
+  .reel__item.is-active img { animation: reel-drift 7s ease-out both; }
+}
+@keyframes reel-drift { from { transform: scale(1.08); } to { transform: none; } }
+
+/* Miniaturas como tira de película, con barra de progreso en la activa */
+.reel__thumbs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-top: 6px; }
+.reel__thumb {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr) 84px;
+  grid-template-columns: 64px minmax(0, 1fr);
   align-items: center;
-  gap: 32px;
-  padding: 26px 0;
-  border-bottom: 1px solid var(--line);
+  gap: 14px;
+  padding: 10px;
+  border: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
 }
-.svc-row__name {
-  font-family: var(--font-display);
-  font-size: clamp(1.7rem, 3vw, 2.4rem);
-  line-height: 1.1;
-  transition: color .2s;
-}
-.svc-row__desc { color: var(--ink-soft); font-size: .98rem; }
-.svc-row__thumb { width: 84px; height: 84px; border-radius: 50%; overflow: hidden; background: var(--rose-tint); }
-.svc-row__thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
-.svc-row:hover .svc-row__name { color: var(--caramel-deep); }
-.svc-row:hover .svc-row__thumb img { transform: scale(1.12); }
+.reel__thumb img { width: 64px; height: 48px; object-fit: cover; opacity: .6; transition: opacity .3s; }
+.reel__thumb span { font-size: .9rem; line-height: 1.3; color: var(--ink-soft); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.reel__thumb::after { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 0; background: var(--caramel); }
+.reel__thumb:hover img,
+.reel__thumb.is-active img { opacity: 1; }
+.reel__thumb.is-active span { color: var(--ink); }
+.reel__thumb.is-active::after { width: 100%; }
+.reel.is-playing .reel__thumb.is-active::after { animation: progress var(--reel-time, 6s) linear both; }
+@keyframes progress { from { width: 0; } to { width: 100%; } }
 
 /* ---------- Banda sobre la doctora (topo) ---------- */
 .about-band { background: var(--taupe); color: #fff; padding: clamp(72px, 10vw, 120px) 0; }
@@ -333,44 +346,6 @@ p  { margin: 0 0 1em; }
 .creds div { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid rgba(255, 255, 255, .25); }
 .creds dt { color: rgba(255, 255, 255, .7); font-size: .92rem; }
 .creds dd { margin: 0; }
-
-/* ---------- Carrusel de noticias ---------- */
-.carousel { position: relative; overflow: hidden; }
-.carousel__track { display: flex; transition: transform .7s cubic-bezier(.4, 0, .2, 1); }
-.carousel__slide { flex: 0 0 100%; display: grid; grid-template-columns: 1.4fr 1fr; background: var(--surface); }
-.carousel__media { aspect-ratio: 3 / 2; overflow: hidden; }
-.carousel__media img { width: 100%; height: 100%; object-fit: cover; }
-.carousel__body { padding: clamp(28px, 4vw, 56px); display: flex; flex-direction: column; justify-content: center; }
-.carousel__meta { display: flex; gap: 12px; font-size: .92rem; color: var(--ink-soft); margin-bottom: 14px; }
-.carousel__meta span { color: var(--caramel-deep); }
-.carousel__body h3 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); }
-.carousel__body p:last-child { color: var(--ink-soft); margin: 0; }
-.carousel__controls { display: flex; align-items: center; gap: 18px; margin-top: 22px; }
-.carousel__btn {
-  width: 46px;
-  height: 46px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--ink);
-  cursor: pointer;
-  transition: border-color .2s, color .2s;
-}
-.carousel__btn:hover { border-color: var(--caramel); color: var(--caramel-deep); }
-.carousel__btn svg { width: 20px; height: 20px; }
-.carousel__dots { display: flex; gap: 8px; }
-.carousel__dots button {
-  width: 8px;
-  height: 8px;
-  padding: 0;
-  border-radius: 50%;
-  border: 1px solid var(--taupe);
-  background: transparent;
-  cursor: pointer;
-}
-.carousel__dots button.is-active { background: var(--caramel); border-color: var(--caramel); }
 
 /* ---------- Banda final ---------- */
 .cta-band { background: var(--rose); color: var(--cacao); text-align: center; padding: clamp(64px, 9vw, 104px) 0; }
@@ -401,8 +376,8 @@ p  { margin: 0 0 1em; }
 
 /* Formación: sí es una secuencia, por eso lleva años */
 .timeline { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-.timeline li { display: grid; grid-template-columns: 200px 1fr; gap: 32px; padding: 30px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
-.timeline__year { font-family: var(--font-display); font-size: clamp(2rem, 3.4vw, 2.8rem); color: var(--caramel); line-height: 1; }
+.timeline li { display: grid; grid-template-columns: 240px 1fr; gap: 32px; padding: 30px 0; border-bottom: 1px solid var(--line); align-items: baseline; }
+.timeline__year { font-family: var(--font-display); font-size: clamp(1.7rem, 2.6vw, 2.2rem); color: var(--caramel); line-height: 1; }
 .timeline h3 { margin-bottom: 6px; }
 .timeline p { color: var(--ink-soft); margin: 0; }
 
@@ -651,39 +626,39 @@ p  { margin: 0 0 1em; }
   .has-submenu.is-open .submenu { display: block; }
   .header-cta { margin: 28px 0 0; }
 
-  .hero__grid,
-  .specialty__grid,
+  .intro-dra__grid,
   .about-band__grid,
   .profile__grid,
   .split-intro,
   .service__grid,
   .contact-grid { grid-template-columns: 1fr; }
-  .lens { justify-self: center; max-width: 440px; order: -1; }
-  .lens__zoom { left: 0; }
   .service__grid--reverse .service__media { order: 0; }
   .service__media,
-  .specialty__media,
   .about-band__photo { aspect-ratio: 4 / 3; }
   .profile__photo { max-width: 420px; margin-right: 8%; }
 
-  .svc-row { grid-template-columns: 1fr 64px; gap: 6px 20px; }
-  .svc-row__name { grid-column: 1; }
-  .svc-row__desc { grid-column: 1; grid-row: 2; }
-  .svc-row__thumb { grid-column: 2; grid-row: 1 / span 2; width: 64px; height: 64px; }
-
-  .carousel__slide { grid-template-columns: 1fr; }
+  .tiles { grid-template-columns: 1fr 1fr; }
+  .reel__stage { aspect-ratio: 4 / 3; }
+  .reel__thumb { grid-template-columns: 1fr; padding: 0; }
+  .reel__thumb img { width: 100%; height: auto; aspect-ratio: 4 / 3; }
+  .reel__thumb span { display: none; }
+  .intro-dra__photo { max-width: 440px; }
   .timeline li { grid-template-columns: 1fr; gap: 8px; }
   .events { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
+  .tiles { grid-template-columns: 1fr; }
+  .tile { aspect-ratio: 16 / 10; }
+  .facts div { grid-template-columns: 1fr; gap: 2px; }
+  .cover { min-height: 560px; align-items: flex-end; }
+  .cover__media::after { background: linear-gradient(0deg, rgba(46, 36, 33, .9) 0%, rgba(46, 36, 33, .55) 60%, rgba(46, 36, 33, .25) 100%); }
   .logo img { height: 34px; }
   body { font-size: 16px; }
   .treatments { grid-template-columns: 1fr; }
   .creds div { grid-template-columns: 1fr; gap: 2px; }
   .footer-grid { grid-template-columns: 1fr; }
   .cases { grid-template-columns: 1fr; }
-  .hero__actions { gap: 20px; }
   .disciplines { font-size: .86rem; }
   .disciplines li + li::before { margin: 0 9px; }
   .wa-float { right: 16px; bottom: 16px; }
