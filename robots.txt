@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://DOMINIO.com/sitemap.xml
+Sitemap: https://drabelenmendozamacias.com/sitemap.xml
