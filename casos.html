@@ -72,40 +72,33 @@
 
     <section class="section">
       <div class="container">
-        <div class="filters">
-          <button class="is-active" data-filter="todos">Todos</button>
-          <button data-filter="acne">Acné</button>
-          <button data-filter="manchas">Manchas</button>
-          <button data-filter="otros">Otros tratamientos</button>
-        </div>
-
         <!-- Para agregar un caso: guarda las fotos en assets/img/casos/ como caso-9-antes.jpg y caso-9-despues.jpg,
              y copia un <article class="case"> completo.
-             data-category debe ser: acne, manchas u otros (o agrega un botón nuevo arriba). -->
+             En case__tag va el tipo: Acné, Manchas, Cirugía, Estética, etc. -->
         <div class="cases">
-          <article class="case" data-category="acne">
+          <article class="case">
             <div class="case__pair">
-              <figure><img src="assets/img/casos/caso-1-antes.jpg" alt="Acné inflamatorio, antes del tratamiento" style="object-position: center 35%" loading="lazy"><figcaption>Antes</figcaption></figure>
-              <figure><img src="assets/img/casos/caso-1-despues.jpg" alt="Acné inflamatorio, después del tratamiento" style="object-position: center 35%" loading="lazy"><figcaption>Después</figcaption></figure>
+              <figure><img src="assets/img/casos/caso-1-antes.jpg" alt="Acné, antes del tratamiento" style="object-position: center 35%" loading="lazy"><figcaption>Antes</figcaption></figure>
+              <figure><img src="assets/img/casos/caso-1-despues.jpg" alt="Acné, después del tratamiento" style="object-position: center 35%" loading="lazy"><figcaption>Después</figcaption></figure>
             </div>
             <div class="case__body">
-              <p class="case__tag">Acné</p>
-              <h3>Acné inflamatorio</h3>
+              <p class="case__tag">Dermatología clínica</p>
+              <h3>Acné</h3>
               <p>[Tratamiento realizado y tiempo de evolución]</p>
             </div>
           </article>
-          <article class="case" data-category="otros">
+          <article class="case">
             <div class="case__pair">
-              <figure><img src="assets/img/casos/caso-2-antes.jpg" alt="[Confirmar: lesiones por daño solar], antes del tratamiento" style="object-position: center 35%" loading="lazy"><figcaption>Antes</figcaption></figure>
-              <figure><img src="assets/img/casos/caso-2-despues.jpg" alt="[Confirmar: lesiones por daño solar], después del tratamiento" style="object-position: center 35%" loading="lazy"><figcaption>Después</figcaption></figure>
+              <figure><img src="assets/img/casos/caso-2-antes.jpg" alt="Cirugía de tumor en la nariz, antes del tratamiento" style="object-position: center 35%" loading="lazy"><figcaption>Antes</figcaption></figure>
+              <figure><img src="assets/img/casos/caso-2-despues.jpg" alt="Cirugía de tumor en la nariz, después del tratamiento" style="object-position: center 35%" loading="lazy"><figcaption>Después</figcaption></figure>
             </div>
             <div class="case__body">
-              <p class="case__tag">Daño solar</p>
-              <h3>[Confirmar: lesiones por daño solar]</h3>
+              <p class="case__tag">Cirugía</p>
+              <h3>Cirugía de tumor en la nariz</h3>
               <p>[Tratamiento realizado y tiempo de evolución]</p>
             </div>
           </article>
-          <article class="case" data-category="acne">
+          <article class="case">
             <div class="case__pair">
               <figure><img src="assets/img/casos/caso-3-antes.jpg" alt="Acné juvenil, antes del tratamiento" style="object-position: center 40%" loading="lazy"><figcaption>Antes</figcaption></figure>
               <figure><img src="assets/img/casos/caso-3-despues.jpg" alt="Acné juvenil, después del tratamiento" style="object-position: center 40%" loading="lazy"><figcaption>Después</figcaption></figure>
@@ -116,7 +109,7 @@
               <p>[Tratamiento realizado y tiempo de evolución]</p>
             </div>
           </article>
-          <article class="case" data-category="acne">
+          <article class="case">
             <div class="case__pair">
               <figure><img src="assets/img/casos/caso-4-antes.jpg" alt="Acné y marcas en la mejilla, antes del tratamiento" style="object-position: center 35%" loading="lazy"><figcaption>Antes</figcaption></figure>
               <figure><img src="assets/img/casos/caso-4-despues.jpg" alt="Acné y marcas en la mejilla, después del tratamiento" style="object-position: center 35%" loading="lazy"><figcaption>Después</figcaption></figure>
@@ -127,29 +120,29 @@
               <p>[Tratamiento realizado y tiempo de evolución]</p>
             </div>
           </article>
-          <article class="case" data-category="otros">
+          <article class="case">
             <div class="case__pair">
-              <figure><img src="assets/img/casos/caso-5-antes.jpg" alt="[Confirmar: lesiones en la espalda], antes del tratamiento" style="object-position: center 40%" loading="lazy"><figcaption>Antes</figcaption></figure>
-              <figure><img src="assets/img/casos/caso-5-despues.jpg" alt="[Confirmar: lesiones en la espalda], después del tratamiento" style="object-position: center 40%" loading="lazy"><figcaption>Después</figcaption></figure>
+              <figure><img src="assets/img/casos/caso-5-antes.jpg" alt="Lesiones en la espalda, antes del tratamiento" style="object-position: center 40%" loading="lazy"><figcaption>Antes</figcaption></figure>
+              <figure><img src="assets/img/casos/caso-5-despues.jpg" alt="Lesiones en la espalda, después del tratamiento" style="object-position: center 40%" loading="lazy"><figcaption>Después</figcaption></figure>
             </div>
             <div class="case__body">
-              <p class="case__tag">Espalda</p>
-              <h3>[Confirmar: lesiones en la espalda]</h3>
+              <p class="case__tag">Dermatología clínica</p>
+              <h3>Lesiones en la espalda</h3>
               <p>[Tratamiento realizado y tiempo de evolución]</p>
             </div>
           </article>
-          <article class="case" data-category="otros">
+          <article class="case">
             <div class="case__pair">
-              <figure><img src="assets/img/casos/caso-6-antes.jpg" alt="[Confirmar: tipo de tratamiento], antes del tratamiento" style="object-position: center 40%" loading="lazy"><figcaption>Antes</figcaption></figure>
-              <figure><img src="assets/img/casos/caso-6-despues.jpg" alt="[Confirmar: tipo de tratamiento], después del tratamiento" style="object-position: center 40%" loading="lazy"><figcaption>Después</figcaption></figure>
+              <figure><img src="assets/img/casos/caso-6-antes.jpg" alt="Rinomodelación, antes del tratamiento" style="object-position: center 40%" loading="lazy"><figcaption>Antes</figcaption></figure>
+              <figure><img src="assets/img/casos/caso-6-despues.jpg" alt="Rinomodelación, después del tratamiento" style="object-position: center 40%" loading="lazy"><figcaption>Después</figcaption></figure>
             </div>
             <div class="case__body">
-              <p class="case__tag">[Confirmar]</p>
-              <h3>[Confirmar: tipo de tratamiento]</h3>
+              <p class="case__tag">Estética</p>
+              <h3>Rinomodelación</h3>
               <p>[Tratamiento realizado y tiempo de evolución]</p>
             </div>
           </article>
-          <article class="case" data-category="acne">
+          <article class="case">
             <div class="case__pair">
               <figure><img src="assets/img/casos/caso-7-antes.jpg" alt="Acné en la mejilla, antes del tratamiento" style="object-position: center 45%" loading="lazy"><figcaption>Antes</figcaption></figure>
               <figure><img src="assets/img/casos/caso-7-despues.jpg" alt="Acné en la mejilla, después del tratamiento" style="object-position: center 45%" loading="lazy"><figcaption>Después</figcaption></figure>
@@ -160,7 +153,7 @@
               <p>[Tratamiento realizado y tiempo de evolución]</p>
             </div>
           </article>
-          <article class="case" data-category="manchas">
+          <article class="case">
             <div class="case__pair">
               <figure><img src="assets/img/casos/caso-8-antes.jpg" alt="Melasma, antes del tratamiento" style="object-position: center 40%" loading="lazy"><figcaption>Antes</figcaption></figure>
               <figure><img src="assets/img/casos/caso-8-despues.jpg" alt="Melasma, después del tratamiento" style="object-position: center 40%" loading="lazy"><figcaption>Después</figcaption></figure>

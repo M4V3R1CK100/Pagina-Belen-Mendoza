@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setupActiveLink();
   setupReel();
   setupServiceNav();
-  setupCaseFilters();
   setYear();
 });
 
@@ -146,22 +145,6 @@ function setupServiceNav() {
   }, { rootMargin: "-45% 0px -50% 0px" });
 
   document.querySelectorAll(".service").forEach((s) => observer.observe(s));
-}
-
-/* ---------- Filtros de casos ---------- */
-function setupCaseFilters() {
-  const buttons = document.querySelectorAll(".filters button");
-  if (!buttons.length) return;
-
-  buttons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      buttons.forEach((b) => b.classList.toggle("is-active", b === btn));
-      const filter = btn.dataset.filter;
-      document.querySelectorAll(".case").forEach((c) => {
-        c.hidden = filter !== "todos" && c.dataset.category !== filter;
-      });
-    });
-  });
 }
 
 function setYear() {

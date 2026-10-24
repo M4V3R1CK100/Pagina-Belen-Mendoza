@@ -488,20 +488,6 @@ p  { margin: 0 0 1em; }
 .service--dark .treatments li { border-color: rgba(255, 255, 255, .16); }
 
 /* ---------- Página Casos ---------- */
-.filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 48px; }
-.filters button {
-  padding: 9px 20px;
-  font-family: inherit;
-  font-size: .95rem;
-  color: var(--ink);
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: transparent;
-  cursor: pointer;
-}
-.filters button:hover { border-color: var(--caramel); }
-.filters button.is-active { background: var(--cacao); border-color: var(--cacao); color: #fff; }
-
 .cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
 .case { background: var(--surface); }
 .case[hidden] { display: none; }
