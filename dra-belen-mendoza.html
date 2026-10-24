@@ -67,13 +67,13 @@
     <section class="profile">
       <div class="container profile__grid">
         <figure class="profile__photo">
-          <img src="assets/img/doctora.jpg" alt="Dra. Belén Mendoza Macías" width="1400" height="2100"><!-- ⚠️ reemplazar por foto de la Dra. -->
+          <img src="assets/img/dra/perfil.jpg" alt="Dra. María Belén Mendoza Macías con un dermatoscopio" width="868" height="1300">
         </figure>
         <div class="profile__text">
           <p class="hero__kicker">Dermatóloga clínica, quirúrgica y estética</p>
-          <h1>Belén Mendoza Macías</h1>
-          <p class="profile__lead">Dermatóloga ecuatoriana formada en Río de Janeiro, con fellowship en dermatopatología. Atiende en Manta la piel, el cabello y las uñas, con especial atención a los tumores de piel. [Ampliar con un texto en primera persona de la Dra.]</p>
-          <p>Su formación en dermatopatología le permite estudiar las biopsias al microscopio, así el diagnóstico y el tratamiento quedan en las mismas manos.</p>
+          <h1>María Belén Mendoza Macías</h1>
+          <p class="profile__lead">Médica de la Universidad de Guayaquil, con posgrado en Dermatología en la Policlínica Geral do Rio de Janeiro y formación en dermatopatología con el Dr. Thiago Jeunon.</p>
+          <p>Su formación en dermatopatología le permite estudiar las biopsias al microscopio, así el diagnóstico y el tratamiento quedan en las mismas manos. Ha presentado trabajos en congresos de dermatología en Brasil, España y Singapur.</p>
           <ul class="disciplines" aria-label="Áreas">
             <li>Clínica</li>
             <li>Quirúrgica</li>
@@ -93,36 +93,62 @@
       <div class="container">
         <div class="section-intro">
           <h2>Formación</h2>
-          <p>Medicina en Ecuador, especialidad y fellowship en Río de Janeiro.</p>
+          <p>De Guayaquil a Río de Janeiro: medicina, especialidad y dermatopatología.</p>
         </div>
+        <!-- Cada etapa puede llevar una foto pequeña: <figure class="timeline__photo"><img ...></figure> -->
         <ol class="timeline">
           <li>
             <span class="timeline__year">2010–2017</span>
-            <div>
-              <h3>Médica general</h3>
-              <p>[Universidad Estatal: confirmar nombre]</p>
+            <div class="timeline__body">
+              <h3>Médica</h3>
+              <p>Universidad de Guayaquil, Facultad de Ciencias Médicas</p>
+            </div>
+            <figure class="timeline__photo"><img src="assets/img/dra/etapa-medicina.jpg" alt="Graduación de Medicina" loading="lazy"></figure>
+          </li>
+          <li>
+            <span class="timeline__year">2016</span>
+            <div class="timeline__body">
+              <h3>Médica pasante en dermatología</h3>
+              <p>Centro Dermatológico Loayza, Clínica Panamericana, Guayaquil</p>
             </div>
           </li>
           <li>
+            <span class="timeline__year">2017–2018</span>
+            <div class="timeline__body">
+              <h3>Internado rotativo</h3>
+              <p>Hospital Abel Gilbert Pontón, Guayaquil</p>
+            </div>
+            <figure class="timeline__photo"><img src="assets/img/dra/etapa-internado.jpg" alt="La Dra. con compañeros durante el internado en Guayaquil" style="object-position: 30% 75%" loading="lazy"></figure>
+          </li>
+          <li>
             <span class="timeline__year">2018–2020</span>
-            <div>
+            <div class="timeline__body">
               <h3>Médica residente</h3>
-              <p>Hospital Rodríguez Zambrano, Manta</p>
+              <p>Jefa de guardia en el Hospital General Rodríguez Zambrano de Manta y en el Hospital Básico de San Pablo</p>
             </div>
           </li>
           <li>
             <span class="timeline__year">2020–2023</span>
-            <div>
-              <h3>Posgrado presencial en Dermatología</h3>
-              <p>Policlínica Geral do Rio de Janeiro, Brasil. Programa acreditado por la Sociedade Brasileira de Dermatologia.</p>
+            <div class="timeline__body">
+              <h3>Posgrado en Dermatología</h3>
+              <p>Servicio de Dermatología de la Policlínica Geral do Rio de Janeiro, Brasil. Sociedade Brasileira de Dermatologia (RJ) e Instituto de Pós-Graduação Médica Carlos Chagas.</p>
+            </div>
+            <figure class="timeline__photo"><img src="assets/img/dra/etapa-rio.jpg" alt="La Dra. en Río de Janeiro" loading="lazy"></figure>
+          </li>
+          <li>
+            <span class="timeline__year">2022</span>
+            <div class="timeline__body">
+              <h3>Pasantía en Dermatología</h3>
+              <p>Instituto Nacional de Câncer (INCA), Río de Janeiro</p>
             </div>
           </li>
           <li>
             <span class="timeline__year">2023–2024</span>
-            <div>
+            <div class="timeline__body">
               <h3>Fellowship en Dermatopatología</h3>
-              <p>ID, con el Dr. Thiago Jeunon, Río de Janeiro, Brasil</p>
+              <p>Con el Dr. Thiago Jeunon, Río de Janeiro</p>
             </div>
+            <figure class="timeline__photo"><img src="assets/img/dra/etapa-fellowship.jpg" alt="La Dra. revisando biopsias al microscopio" loading="lazy"></figure>
           </li>
         </ol>
       </div>
@@ -133,7 +159,7 @@
       <div class="container split-intro">
         <div class="section-intro">
           <h2>Sociedades científicas</h2>
-          <p>Es miembro de sociedades de dermatología y dermatopatología de Ecuador e Iberoamérica.</p>
+          <p>Es miembro de sociedades de dermatología y dermatopatología de Ecuador, Brasil e Iberoamérica.</p>
         </div>
         <ul class="memberships">
           <li>
@@ -141,8 +167,8 @@
             <div><h3>Colegio Ibero-Latinoamericano de Dermatología</h3><p>CILAD</p></div>
           </li>
           <li>
-            <span class="membership__logo ph">ISBD</span>
-            <div><h3>[Nombre completo de ISBD]</h3><p>ISBD</p></div>
+            <span class="membership__logo ph">SBD</span>
+            <div><h3>Sociedade Brasileira de Dermatologia</h3><p>SBD</p></div>
           </li>
           <li>
             <span class="membership__logo ph">SILADEPA</span>
@@ -156,30 +182,65 @@
       </div>
     </section>
 
-    <!-- ================= CONGRESOS ================= -->
-    <section class="about-band about-band--plain" id="congresos">
-      <div class="container">
-        <div class="section-intro section-intro--light">
-          <h2>Congresos y conferencias</h2>
-          <p>Participación como asistente y ponente.</p>
+    <!-- ================= PUBLICACIONES ================= -->
+    <section class="section section--tint" id="publicaciones">
+      <div class="container split-intro">
+        <div class="section-intro">
+          <h2>Trabajos presentados</h2>
+          <p>Una selección de los 11 casos clínicos y pósteres que ha presentado en congresos internacionales.</p>
         </div>
-        <ul class="events">
-          <li><span>20XX</span> [Congreso, ciudad]</li>
-          <li><span>20XX</span> [Congreso, ciudad]</li>
-          <li><span>20XX</span> [Conferencia dictada]</li>
-          <li><span>20XX</span> [Publicación o póster]</li>
+        <ul class="pubs">
+          <li>
+            <h3>Rede invertida e sua importância no diagnóstico do melanoma: relato de caso</h3>
+            <p>Autora principal. E-póster, Reunión Anual de Dermatólogos Latinoamericanos (RADLA), Curitiba, 2023.</p>
+          </li>
+          <li>
+            <h3>Síndrome de Brooke-Spiegler: reporte de caso</h3>
+            <p>Autora principal. E-póster, 25.º Congreso Mundial de Dermatología, Singapur, 2023.</p>
+          </li>
+          <li>
+            <h3>Melanoma desmoplásico simulando un dermatofibroma</h3>
+            <p>Coautora. E-póster, RADLA, Curitiba, 2023.</p>
+          </li>
+          <li>
+            <h3>Síndrome de Gorlin-Goltz: descripción de un caso clínico</h3>
+            <p>Coautora. XXIII Congreso CILAD, Madrid, 2022.</p>
+          </li>
         </ul>
       </div>
     </section>
 
+    <!-- ================= CONGRESOS ================= -->
+    <section class="about-band about-band--plain" id="congresos">
+      <div class="container">
+        <div class="section-intro section-intro--light">
+          <h2>Congresos</h2>
+          <p>Algunos de los congresos a los que ha asistido.</p>
+        </div>
+        <ul class="events">
+          <li><span>2026</span> XLIII RADLA, Buenos Aires</li>
+          <li><span>[año]</span> XI Congreso Ecuatoriano de Dermatología</li>
+          <li><span>2023</span> 25.º Congreso Mundial de Dermatología, Singapur</li>
+          <li><span>2023</span> 40.ª RADLA, Curitiba</li>
+          <li><span>2023</span> 33.º Congreso Brasileño de Cirugía Dermatológica, Río de Janeiro</li>
+          <li><span>2022</span> 75.º Congreso de la Sociedade Brasileira de Dermatologia, São Paulo</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= CV ================= -->
     <section class="cta-band">
       <div class="container">
-        <h2>Agenda tu consulta</h2>
-        <p>Las citas se coordinan por WhatsApp.</p>
-        <a class="btn btn--primary" href="contacto" data-wa>
-          <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#i-wa"/></svg>
-          Escribir por WhatsApp
-        </a>
+        <h2>Currículum completo</h2>
+        <p>Formación, experiencia, publicaciones y cursos de la Dra. María Belén Mendoza Macías.</p>
+        <div class="cta-band__actions">
+          <!-- ⚠️ Guardar el PDF en assets/docs/ con este nombre exacto -->
+          <a class="btn btn--primary" href="assets/docs/cv-dra-belen-mendoza.pdf" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            Descargar CV (PDF)
+          </a>
+          <a class="btn btn--outline" href="contacto" data-wa>Agendar cita</a>
+        </div>
       </div>
     </section>
 

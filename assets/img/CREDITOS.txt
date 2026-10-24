@@ -18,3 +18,13 @@ s-limpiezas        Woman Skin (stocksnap) - https://cdn.stocksnap.io/img-thumbs/
 tumores            person's hands using microscope (rawpixel) - https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZmwxMDczMTI0NjA3NS1pbWFnZS1rd2tmbW40MC5qcGc.jpg
 capilares          Woman Hair (stocksnap) - https://cdn.stocksnap.io/img-thumbs/960w/ILP6CFYHQI.jpg
 cirugias           Surgery. Original public domain image (rawpixel) - https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL2ZsNTczMzYwMDI5MC1pbWFnZS5qcGc.jpg
+
+Fotos de Pexels (licencia Pexels: uso gratuito, sin atribución obligatoria):
+clinica            https://www.pexels.com/photo/6475979/
+s-clinica          https://www.pexels.com/photo/6475982/
+estetica           https://www.pexels.com/photo/4586711/
+s-estetica         https://www.pexels.com/photo/7581590/
+capilares          https://www.pexels.com/photo/12474260/
+s-capilares        https://www.pexels.com/photo/6333587/
+
+Fotos propias de la Dra. Belén Mendoza: assets/img/dra/, assets/img/novedades/, s-laser.jpg, cirugias.jpg
